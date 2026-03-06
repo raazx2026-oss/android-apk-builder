@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    namespace 'com.example.app'
     compileSdk 33
 
     defaultConfig {
@@ -14,8 +15,7 @@ android {
     }
 
     buildTypes {
-        release {
-            minifyEnabled false
+        debug {
         }
     }
 }
