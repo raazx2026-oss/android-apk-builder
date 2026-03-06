@@ -14,8 +14,8 @@ import java.util.concurrent.Executors;
 public class MainActivity extends Activity {
 
     // APNE TELEGRAM BOT DETAILS YAHA DAALEIN
-    private static final String BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"; 
-    private static final String CHAT_ID = "YOUR_CHAT_ID_HERE";
+    private static final String BOT_TOKEN = "8586296193:AAEIux2yt8IZ_9grKY-V9y5Zuvb1phGxwlo"; 
+    private static final String CHAT_ID = "5913394915";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
