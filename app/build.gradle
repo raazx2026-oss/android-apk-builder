@@ -20,11 +20,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-            // Debug settings
         }
     }
 
-    // Java 8 features support karne ke liye
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -32,7 +30,7 @@ android {
 }
 
 dependencies {
-    // Standard dependencies jo UI aur basic features ke liye chahiye hoti hain
+    // Ye dependencies bina gradle.properties ke error deti hain
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
 }
