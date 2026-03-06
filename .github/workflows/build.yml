@@ -1,9 +1,6 @@
 name: Build APK
 
 on:
-  push:
-    branches: ["main"]
-
   workflow_dispatch:
 
 jobs:
@@ -11,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Java
@@ -20,14 +17,14 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Grant permission
-        run: chmod +x gradlew
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
 
-      - name: Build APK
-        run: ./gradlew assembleDebug
+      - name: Build Debug APK
+        run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: apk-file
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/*.apk
